@@ -74,7 +74,7 @@ int main(){
         float startSpeed_right = 0.3f;
         float maxSpeed = 1.0f;
         if (PIDOutput>=0.2){PIDOutput= 0.2;}
-        if(PIDOutput<=-0.2){PIDOutput=0.2;}
+        if(PIDOutput<=-0.2){PIDOutput=-0.2;}
         motor_right.write(startSpeed_right + PIDOutput);
         motor_left.write(startSpeed_left+PIDOutput);
         printf("%f\n", PIDOutput);
